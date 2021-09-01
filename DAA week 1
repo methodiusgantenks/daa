@@ -1,0 +1,119 @@
+Menghitung FPB
+
+Algoritma :
+step 1 jika n=0, return nilai m sebagai hasil dan stop. jika tidak, kembali ke step 2
+step 2 bagi nilai m dengan n, masukan nilai sisanya ke r.
+step 3 masukan nilai n ke m dan nilai r ke n. kembali ke step 1.
+
+Pseudocode:
+while n ≠ 0 do
+r ← m mod n
+m ← n
+n ← r
+return m
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Menghitung KPK dengan FPB
+
+Algoritma 
+Step 1 bilangan 3 dan 4 ditambahkan dengan sesama bilangan hingga kelipatan mereka sama
+Step 2 Jika bilangan 3 masih lebih kecil dari m makan tambahkan kembali dengan 3
+Pseudocode:
+#include <stdio.h>
+
+int FPB(int a, int b){
+int r = 0;
+    while(b!=0){
+        r = a % b;
+        a = b;
+        b = r;
+    }
+
+    return a;
+}
+
+
+int KPK(int a, int b){
+    return a*b / FPB(a, b);
+}
+
+int main(){
+int a=120;
+int b=90;
+    printf("%d", KPK(KPK(120, 88),36));
+    return 0;
+}
+
+
+KPK = KPK / FPB
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+fungsi untuk menukar 2 variabel x dan y:
+define swap(x,y)
+buffer = x
+x = y
+y = buffer
+ada M= manggis, P=Pisang ,K=kosong/ Buffer
+
+K = M
+M = P
+P = K
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Luas Segitiga
+
+Algoritma:
+Masukan nilai alas (a) dan nilai tinggi segitiga (t)
+Maka untuk menghitung luas digunakan rumus alas dengan tinggi yang sudah ditentukan
+Rumus untuk menghitung Luas Segitiga yaitu L = 1/2*a*t
+Nilai L (Luas) akan dicetak sebagai output ke perangkat output (keluaran)
+
+Pseudocode:
+Alas= a, Tinggi = t , Luas = L
+a = 25
+t = 30
+
+L = 1/2*a*t
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Luas jajar genjang
+
+Algoritma:
+Berikan 3 variabel awal
+Masukkan nilai 5 pada variabel panjang
+Masukkan nilai 3 pada variabel lebar
+Masukkan setiap variabel pada rumus jajar genjang
+
+Pseudocode:
+a = alas, tinggi = t , luas = L 
+a=5, t=3, 
+
+L = p * l
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Volume tabung
+
+Algoritma:
+Berikan 4 variabel awal
+Masukkan nilai 22/7 pada variabel pi
+Masukkan nilai 3 pada variabel r
+Masukkan nilai 5 pada variabel t
+Masukkan setiap variabel pada rumus volume tabung
+
+Pseudocode:
+pi = 22/7 , r = 3, t = 5, v = 0
+
+v = pi * r^2 * t
+print v
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Volume kerucut
+
+Algoritma:
+Berikan variabel pi, d, r, t, dan v
+Masukkan nilai 3.14 pada variabel pi
+Masukkan nilai 5 pada variabel d
+Nilai r didapat dari setengah d
+Masukkan nilai 4 pada variabel t
+Masukkan setiap variabel pada rumus volume kerucut
+
+Pseudocode:
+int pi = 3,14, d = 5, r = d/2, t = 4, v = 0
+
+v = 1/3 * pi * r * r * t
+print v
